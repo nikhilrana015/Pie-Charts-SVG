@@ -1,0 +1,32 @@
+svg, input {
+  margin: 0 auto;
+  display: block;
+}
+
+
+.tooltip{
+	opacity: 0;
+	position: absolute;                 /*absolute position just shows the div at that position*/ 
+	pointer-events:none;           /*When we hover over the scatter plots the tooltip pops up and causing the mouse to move 
+	                               to the tooltip results in flickering of tooltip.*/      
+	background-color: #32ff6a;
+	border: 8px solid #23eae6;
+	border-radius: 8px;
+	padding: 15px; 
+}
+
+.tooltip p{
+	margin: 0;
+}
+
+.tooltip:before{
+	content: ' ';
+	position: absolute;
+	border: 12px solid transparent;       /*Used to create arrow in div while hovering*/
+	border-bottom-color: #23eae6;
+	top:-30px;
+	left: 50%;
+	margin-left: -6px;
+
+
+}
